@@ -38,3 +38,6 @@ jobs:
           author-url: "${{ github.event.discussion.html_url }}"
           body: |
             ${{ github.event.discussion.body }}
+
+      - run: |
+            echo "Telegraph URL: ${{ steps.telegraph-issue.outputs.url || steps.telegraph-discussion.outputs.url }}" >> $GITHUB_STEP_SUMMARY
