@@ -1,0 +1,40 @@
+name: Created Notification
+
+on:
+  issues:
+    types: [opened]
+  discussion:
+    types: [created]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Create Issue Post
+        if: github.event_name == 'issues'
+        uses: jiacai2050/telegraph-action@v1
+        id: telegraph-issue
+        with:
+          token: ${{ secrets.TELEGRAPH_TOKEN }}
+          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: "@xigua_talk"
+          author-name: "西瓜杂谈"
+          title: "${{ github.event.issue.title }}"
+          author-url: "${{ github.event.issue.html_url }}"
+          body: |
+            ${{ github.event.issue.body }}
+
+      - name: Create Discussion Post
+        if: github.event_name == 'discussion'
+        uses: jiacai2050/telegraph-action@v1
+        id: telegraph-discussion
+        with:
+          token: ${{ secrets.TELEGRAPH_TOKEN }}
+          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: "@xigua_talk"
+          author-name: "西瓜杂谈"
+          title: "${{ github.event.discussion.title }}"
+          author-url: "${{ github.event.discussion.html_url }}"
+          body: |
+            ${{ github.event.discussion.body }}
