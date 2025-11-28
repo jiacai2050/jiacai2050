@@ -39,5 +39,33 @@ jobs:
           body: |
             ${{ github.event.discussion.body }}
 
+      - name: Create Discussion Post(Rust)
+        if: github.event_name == 'discussion' && contains(github.event.discussion.labels.*.name, 'rust')
+        uses: jiacai2050/telegraph-action@v1
+        id: telegraph-discussion
+        with:
+          token: ${{ secrets.TELEGRAPH_TOKEN }}
+          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: "@rust_talk"
+          author-name: "西瓜杂谈"
+          title: "${{ github.event.discussion.title }}"
+          author-url: "${{ github.event.discussion.html_url }}"
+          body: |
+            ${{ github.event.discussion.body }}
+
+      - name: Create Discussion Post(Zig)
+        if: github.event_name == 'discussion' && contains(github.event.discussion.labels.*.name, 'zig')
+        uses: jiacai2050/telegraph-action@v1
+        id: telegraph-discussion
+        with:
+          token: ${{ secrets.TELEGRAPH_TOKEN }}
+          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: "@zig_cc"
+          author-name: "西瓜杂谈"
+          title: "${{ github.event.discussion.title }}"
+          author-url: "${{ github.event.discussion.html_url }}"
+          body: |
+            ${{ github.event.discussion.body }}
+
       - run: |
             echo "Telegraph URL: ${{ steps.telegraph-issue.outputs.url || steps.telegraph-discussion.outputs.url }}" >> $GITHUB_STEP_SUMMARY
