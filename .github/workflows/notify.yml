@@ -1,5 +1,4 @@
 name: Created Notification
-
 on:
   issues:
     types: [opened]
@@ -11,61 +10,41 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Create Issue Post
-        if: github.event_name == 'issues'
+      - name: Send to xigua_talk
         uses: jiacai2050/telegraph-action@v1
-        id: telegraph-issue
+        id: xigua-talk
         with:
           token: ${{ secrets.TELEGRAPH_TOKEN }}
           telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
           chat-id: "@xigua_talk"
           author-name: "西瓜杂谈"
-          title: "${{ github.event.issue.title }}"
-          author-url: "${{ github.event.issue.html_url }}"
-          body: |
-            ${{ github.event.issue.body }}
+          title: ${{ github.event.issue.title || github.event.discussion.title }}
+          author-url: ${{ github.event.issue.html_url || github.event.discussion.html_url }}
+          body: ${{ github.event.issue.body || github.event.discussion.body }}
 
-      - name: Create Discussion Post
-        if: github.event_name == 'discussion'
-        uses: jiacai2050/telegraph-action@v1
-        id: telegraph-discussion
-        with:
-          token: ${{ secrets.TELEGRAPH_TOKEN }}
-          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
-          chat-id: "@xigua_talk"
-          author-name: "西瓜杂谈"
-          title: "${{ github.event.discussion.title }}"
-          author-url: "${{ github.event.discussion.html_url }}"
-          body: |
-            ${{ github.event.discussion.body }}
-
-      - name: Create Discussion Post(Rust)
+      - name: Send to rust_talk
         if: github.event_name == 'discussion' && contains(github.event.discussion.labels.*.name, 'rust')
         uses: jiacai2050/telegraph-action@v1
-        id: telegraph-discussion
         with:
           token: ${{ secrets.TELEGRAPH_TOKEN }}
           telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
           chat-id: "@rust_talk"
           author-name: "西瓜杂谈"
-          title: "${{ github.event.discussion.title }}"
-          author-url: "${{ github.event.discussion.html_url }}"
-          body: |
-            ${{ github.event.discussion.body }}
+          title: ${{ github.event.discussion.title }}
+          author-url: ${{ github.event.discussion.html_url }}
+          body: ${{ github.event.discussion.body }}
 
-      - name: Create Discussion Post(Zig)
+      - name: Send to zig_cc
         if: github.event_name == 'discussion' && contains(github.event.discussion.labels.*.name, 'zig')
         uses: jiacai2050/telegraph-action@v1
-        id: telegraph-discussion
         with:
           token: ${{ secrets.TELEGRAPH_TOKEN }}
           telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
           chat-id: "@zig_cc"
           author-name: "西瓜杂谈"
-          title: "${{ github.event.discussion.title }}"
-          author-url: "${{ github.event.discussion.html_url }}"
-          body: |
-            ${{ github.event.discussion.body }}
+          title: ${{ github.event.discussion.title }}
+          author-url: ${{ github.event.discussion.html_url }}
+          body: ${{ github.event.discussion.body }}
 
       - run: |
-            echo "Telegraph URL: ${{ steps.telegraph-issue.outputs.url || steps.telegraph-discussion.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+            echo "Telegraph URL: ${{ steps.xigua-talk.outputs.url }}" >> $GITHUB_STEP_SUMMARY
