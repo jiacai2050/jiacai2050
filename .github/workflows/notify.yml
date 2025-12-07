@@ -24,27 +24,31 @@ jobs:
 
       - name: Send to rust_talk
         if: github.event_name == 'discussion' && contains(github.event.discussion.labels.*.name, 'rust')
-        uses: jiacai2050/telegraph-action@v1
+        uses: jiacai2050/telegram-action@v1
         with:
-          token: ${{ secrets.TELEGRAPH_TOKEN }}
-          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
           chat-id: "@rust_talk"
-          author-name: "西瓜杂谈"
-          title: ${{ github.event.discussion.title }}
-          author-url: ${{ github.event.discussion.html_url }}
-          body: ${{ github.event.discussion.body }}
+          message: |
+            ${{ steps.xigua-talk.outputs.url }}
 
       - name: Send to zig_cc
         if: github.event_name == 'discussion' && contains(github.event.discussion.labels.*.name, 'zig')
-        uses: jiacai2050/telegraph-action@v1
+        uses: jiacai2050/telegram-action@v1
         with:
-          token: ${{ secrets.TELEGRAPH_TOKEN }}
-          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
           chat-id: "@zig_cc"
-          author-name: "西瓜杂谈"
-          title: ${{ github.event.discussion.title }}
-          author-url: ${{ github.event.discussion.html_url }}
-          body: ${{ github.event.discussion.body }}
+          message: |
+            ${{ steps.xigua-talk.outputs.url }}
+
+      - name: Post Mastodon Status
+        uses: jiacai2050/mastodon-action@v1
+        id: mastodon
+        with:
+          token: ${{ secrets.MASTODON_TOKEN }}
+          status: |
+            ${{ github.event.issue.title || github.event.discussion.title }}
+            ${{ github.event.issue.html_url || github.event.discussion.html_url }}
 
       - run: |
             echo "Telegraph URL: ${{ steps.xigua-talk.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+            echo "Mastodon URL: ${{ steps.mastodon.outputs.url }}" >> $GITHUB_STEP_SUMMARY
