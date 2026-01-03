@@ -9,6 +9,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    if: github.actor == 'jiacai2050'
     steps:
       - name: Send to xigua_talk
         uses: jiacai2050/telegraph-action@v1
