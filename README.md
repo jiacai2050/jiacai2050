@@ -21,8 +21,9 @@ Hi, I'm [Jiacai Liu](https://liujiacai.net/), a developer from Hangzhou, China.
 | Repo | Lang | Description | Last Commit |
 | --- | --- | --- | --- |
 | [zigcli](https://github.com/jiacai2050/zigcli) | Zig | A toolkit for building command line programs in Zig. | ![](https://img.shields.io/github/last-commit/jiacai2050/zigcli/main) |
+| [zllm](https://github.com/jiacai2050/zllm) | Zig | A lightweight, high-performance LLM inference engine for macOS Apple Silicon | ![](https://img.shields.io/github/last-commit/jiacai2050/zllm/main) |
 | [flauth](https://github.com/jiacai2050/flauth) | Dart | A privacy-first, fully open-source TOTP authenticator | ![](https://img.shields.io/github/last-commit/jiacai2050/flauth/main) |
-| [ai-menshen](https://github.com/jiacai2050/ai-menshen) | Dart | A lightweight, local-first AI Gateway. | ![](https://img.shields.io/github/last-commit/jiacai2050/ai-menshen/main) |
+| [ai-menshen](https://github.com/jiacai2050/ai-menshen) | Go | A lightweight, local-first AI Gateway. | ![](https://img.shields.io/github/last-commit/jiacai2050/ai-menshen/main) |
 | [1History](https://github.com/localfirstapp/1History) | Rust, JS | Backup/visualize browser histories. | ![](https://img.shields.io/github/last-commit/localfirstapp/1History/main) |
 | [my-works](https://github.com/jiacai2050/my-works) | Python, JS | Monorepo of my public softwares. ShellGPT/Gooreplacer/Text Saver... | ![](https://img.shields.io/github/last-commit/jiacai2050/my-works/main) |
 | [edgebin](https://github.com/jiacai2050/edgebin) | JS | A minimalist HTTP service designed to test your networking stack. | ![](https://img.shields.io/github/last-commit/jiacai2050/edgebin/main) |

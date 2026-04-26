@@ -5,13 +5,18 @@ lang = ["Zig"]
 description = "A toolkit for building command line programs in Zig."
 
 [[project]]
+repo = "jiacai2050/zllm"
+lang = ["Zig"]
+description = "A lightweight, high-performance LLM inference engine for macOS Apple Silicon"
+
+[[project]]
 repo = "jiacai2050/flauth"
 lang = ["Dart"]
 description = "A privacy-first, fully open-source TOTP authenticator"
 
 [[project]]
 repo = "jiacai2050/ai-menshen"
-lang = ["Dart"]
+lang = ["Go"]
 description = "A lightweight, local-first AI Gateway."
 
 [[project]]
