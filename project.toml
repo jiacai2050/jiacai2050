@@ -1,0 +1,42 @@
+
+[[project]]
+repo = "jiacai2050/zigcli"
+lang = ["Zig"]
+description = "A toolkit for building command line programs in Zig."
+
+[[project]]
+repo = "jiacai2050/flauth"
+lang = ["Dart"]
+description = "A privacy-first, fully open-source TOTP authenticator"
+
+[[project]]
+repo = "jiacai2050/ai-menshen"
+lang = ["Dart"]
+description = "A lightweight, local-first AI Gateway."
+
+[[project]]
+repo = "localfirstapp/1History"
+lang = ["Rust", "JS"]
+description = """
+Backup/visualize browser histories.
+"""
+
+[[project]]
+repo = "jiacai2050/my-works"
+lang = ["Python", "JS"]
+description = "Monorepo of my public softwares. ShellGPT/Gooreplacer/Text Saver..."
+
+[[project]]
+repo = "jiacai2050/edgebin"
+lang = ["JS"]
+description = "A minimalist HTTP service designed to test your networking stack."
+
+[[project]]
+repo = "zigcc/awesome-zig"
+lang = ["Markdown"]
+description = "A collaborative list of awesome Zig libraries and resources."
+
+[[project]]
+repo = "zigcc/zig-cookbook"
+lang = ["Zig"]
+description = "Simple Zig programs that demonstrate good practices to accomplish common programming tasks."
