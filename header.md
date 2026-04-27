@@ -10,8 +10,8 @@ Hi, I'm [Jiacai Liu](https://liujiacai.net/), a developer from Hangzhou, China.
 - 📫 How to reach me: [Email](mailto:dev@liujiacai.net), [Twitter](https://twitter.com/@liujiacai), [Mastodon](https://mastodon.social/@liujiacai) or [GitHub Discussions](https://github.com/jiacai2050/jiacai2050/discussions/new?category=ama).
   - Go to https://ask.ziglang.cc for questions related with Zig.
 
-<center>
+<p align="center">
 <a href="https://twitter.com/@liujiacai">
 <img src="./twitter.gif" alt="Follow me on Twitter" width="250"/>
 </a>
-</center>
+</p>

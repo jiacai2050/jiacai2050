@@ -29,7 +29,9 @@ Backup/visualize browser histories.
 [[project]]
 repo = "jiacai2050/my-works"
 lang = ["Python", "JS"]
-description = "Monorepo of my public softwares. ShellGPT/Gooreplacer/Text Saver..."
+description = """
+Monorepo of my public softwares: [ShellGPT](https://pypi.org/project/shgpt/), [Gooreplacer](https://liujiacai.net/gooreplacer/) [TextSaver](https://liujiacai.net/text-saver/), [LinkPreview](https://liujiacai.net/link-preview/), [VideoCompress](https://pypi.org/project/video-compress/)
+"""
 
 [[project]]
 repo = "jiacai2050/edgebin"
@@ -38,10 +40,15 @@ description = "A minimalist HTTP service designed to test your networking stack.
 
 [[project]]
 repo = "zigcc/awesome-zig"
-lang = ["Markdown"]
+lang = ["markdown"]
 description = "A collaborative list of awesome Zig libraries and resources."
 
 [[project]]
 repo = "zigcc/zig-cookbook"
 lang = ["Zig"]
 description = "Simple Zig programs that demonstrate good practices to accomplish common programming tasks."
+
+[[project]]
+repo = "zigcc/zigcc.github.io"
+lang = ["markdown"]
+description = "Zig Chinese Community Website"
