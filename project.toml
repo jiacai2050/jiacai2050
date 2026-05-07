@@ -5,9 +5,29 @@ lang = ["Zig"]
 description = "A toolkit for building command line programs in Zig."
 
 [[project]]
+repo = "jiacai2050/zig-curl"
+lang = ["Zig"]
+description = "Libcurl bindings for Zig"
+
+[[project]]
+repo = "jiacai2050/zig-napi"
+lang = ["Zig"]
+description = "[Node-API(N-API)](https://nodejs.org/api/n-api.html) bindings for Zig"
+
+[[project]]
+repo = "jiacai2050/zig-emacs"
+lang = ["Zig"]
+description = "Emacs [dynamic modules](https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Dynamic-Modules.html) bindings for Zig"
+
+[[project]]
 repo = "jiacai2050/zllm"
 lang = ["Zig"]
 description = "A lightweight, high-performance LLM inference engine for macOS Apple Silicon"
+
+[[project]]
+repo = "zigcc/zig-cookbook"
+lang = ["Zig"]
+description = "Simple Zig programs that demonstrate good practices to accomplish common programming tasks."
 
 [[project]]
 repo = "jiacai2050/flauth"
@@ -42,11 +62,6 @@ description = "A minimalist HTTP service designed to test your networking stack.
 repo = "zigcc/awesome-zig"
 lang = ["markdown"]
 description = "A collaborative list of awesome Zig libraries and resources."
-
-[[project]]
-repo = "zigcc/zig-cookbook"
-lang = ["Zig"]
-description = "Simple Zig programs that demonstrate good practices to accomplish common programming tasks."
 
 [[project]]
 repo = "zigcc/zigcc.github.io"

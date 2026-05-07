@@ -9,10 +9,11 @@ rows = []
 for p in data.get("project", []):
     repo = p["repo"]
     name = repo.split('/')[-1]
-    repo_md = f"[{name}](https://github.com/{repo})"
+    repo_link = f"https://github.com/{repo}"
+    repo_md = f"[{name}]({repo_link})"
     lang = ", ".join(p.get("lang", []))
     desc = p.get("description", "").strip()
-    badge = f"![](https://img.shields.io/github/last-commit/{repo}?cacheSeconds={cache_seconds})"
+    badge = f"![](https://img.shields.io/github/last-commit/{repo}?cacheSeconds={cache_seconds}&label={name}&style=flat-square)"
     rows.append((repo_md, lang, desc, badge))
 
 header = "| Repo | Lang | Description | Last Commit |"
