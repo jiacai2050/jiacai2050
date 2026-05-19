@@ -10,14 +10,9 @@ lang = ["Zig"]
 description = "Libcurl bindings for Zig"
 
 [[project]]
-repo = "jiacai2050/zig-napi"
+repo = "jiacai2050/comptime-serde"
 lang = ["Zig"]
-description = "[Node-API(N-API)](https://nodejs.org/api/n-api.html) bindings for Zig"
-
-[[project]]
-repo = "jiacai2050/zig-emacs"
-lang = ["Zig"]
-description = "Emacs [dynamic modules](https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Dynamic-Modules.html) bindings for Zig"
+description = "Compile-time serialization and deserialization for Zig."
 
 [[project]]
 repo = "jiacai2050/zllm"
@@ -67,3 +62,13 @@ description = "A collaborative list of awesome Zig libraries and resources."
 repo = "zigcc/zigcc.github.io"
 lang = ["markdown"]
 description = "Zig Chinese Community Website"
+
+[[project]]
+repo = "jiacai2050/zig-napi"
+lang = ["Zig"]
+description = "[Node-API(N-API)](https://nodejs.org/api/n-api.html) bindings for Zig"
+
+[[project]]
+repo = "jiacai2050/zig-emacs"
+lang = ["Zig"]
+description = "Emacs [dynamic modules](https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Dynamic-Modules.html) bindings for Zig"
