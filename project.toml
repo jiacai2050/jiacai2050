@@ -72,3 +72,23 @@ description = "[Node-API(N-API)](https://nodejs.org/api/n-api.html) bindings for
 repo = "jiacai2050/zig-emacs"
 lang = ["Zig"]
 description = "Emacs [dynamic modules](https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Dynamic-Modules.html) bindings for Zig"
+
+[[project]]
+repo = "jiacai2050/sendmail-action"
+lang = ["Bash"]
+description = "A GitHub Composite Action to send text and/or HTML emails via SMTP using curl."
+
+[[project]]
+repo = "jiacai2050/mastodon-action"
+lang = ["JS"]
+description = "A GitHub Action to post Mastodon status updates"
+
+[[project]]
+repo = "jiacai2050/telegraph-action"
+lang = ["JS"]
+description = "A GitHub Action to create a Telegraph post from a markdown file."
+
+[[project]]
+repo = "jiacai2050/telegram-action"
+lang = ["JS"]
+description = "A GitHub Action allows you to send messages to a Telegram chat using a bot."
